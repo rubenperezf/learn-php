@@ -9,6 +9,12 @@
 	//constants
 	define("NAME", "Lucas");
 
+	//references
+	$fullName = &$last_name;
+	echo $fullName;
+
+	$fullName.= " Perez";
+	echo $fullName
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +23,7 @@
 	<title>Variables</title>
 </head>
 <body>
-	<h1><?php echo $firstName ?></h1>
-	<h1><?php echo NAME ?></h1>
+	<!-- <h1><?php echo $firstName ?></h1>
+	<h1><?php echo NAME ?></h1> -->
 </body>
 </html>
