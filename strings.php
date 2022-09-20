@@ -33,6 +33,7 @@
 	<h1><?php echo $stringOne[0] ?></h1>
 	<h1><?php echo strlen($stringOne) ?></h1>
 	<h1><?php echo strtoupper($stringOne) ?></h1>
-	<h1><?php echo str_replace("h", "j", $stringOne) ?></h1
+	<h1><?php echo str_replace("h", "j", $stringOne) ?></h1>
+	<h1><?php echo "{$stringOne}s" ?></h1>
 </body>
 </html>
