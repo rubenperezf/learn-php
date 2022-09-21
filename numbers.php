@@ -13,9 +13,12 @@
 	$number -= 10;
 	$number *= 2;
 
-	echo floor($otherNumber);
-	echo ceil($otherNumber);
-	echo pi()
+	// echo floor($otherNumber);
+	// echo ceil($otherNumber);
+	// echo pi();
+
+	//exponentiattion
+	echo 4**2;
 
 	
 
