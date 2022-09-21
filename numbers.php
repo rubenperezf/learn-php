@@ -18,7 +18,13 @@
 	// echo pi();
 
 	//exponentiattion
-	echo 4**2;
+	// echo 4**2;
+
+	//modulo
+	$students = 82;
+	$groups = 6;
+	$studenntsWithNoGroup = $students % $groups;
+	echo $studenntsWithNoGroup;
 
 	
 
