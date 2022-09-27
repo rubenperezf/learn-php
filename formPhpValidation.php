@@ -21,30 +21,31 @@
 <form method="post" action="">
     Enter a word that starts with the letter "a":
     <br>
-    <input type="text" name="a-word" id="a-word" value="<?=$_POST["a-word"]?>">
+    <input type="text" name="a-word" id="a-word" value="<?=$_SERVER["REQUEST_METHOD"]==="POST" && $_POST["a-word"]?>">
     <p class="error" id="a-error"><?=checkWord($_POST["a-word"],"a")?></p>
     <br>      
       
     <br>     
     Enter a word that starts with the letter "b":
     <br>
-    <input type="text" id="b-word" name="b-word" value="<?=$_POST["b-word"]?>">
+    <input type="text" id="b-word" name="b-word" value="<?=$_SERVER["REQUEST_METHOD"]==="POST" && $_POST["b-word"]?>">
     <p class="error" id="b-error"><?=checkWord($_POST["b-word"],"b")?></p>
     <br>      
       
     <br>
     Enter a word that starts with the letter "c":
     <br>
-    <input type="text" id="c-word" name="c-word" value="<?=$_POST["c-word"]?>">
-    <p class="error" id="c-error"><?=checkWord($_POST["c-word"],"c")?></p>
+    <input type="text" id="c-word" name="c-word" value="<?=$_SERVER["REQUEST_METHOD"]==="POST" && $_POST["c-word"]?>">
+    <p class="error" id="c-error"><?=$_SERVER["REQUEST_METHOD"]==="POST" ? checkWord($_POST["c-word"],"c") : null?></p>
     <br>      
       
     <br>
     <input type="submit" value="Submit Words">
 </form>
 <div>
-    <h3>"a" is for: <?= $_POST["a-word"];?><h3>
-    <h3>"b" is for: <?= $_POST["b-word"];?><h3>
-    <h3>"c" is for: <?= $_POST["c-word"];?><h3>    
+    <h3>"a" is for: <?= $_SERVER["REQUEST_METHOD"]==="POST" && $_POST["a-word"];?><h3>
+    <h3>"b" is for: <?= $_SERVER["REQUEST_METHOD"]==="POST" && $_POST["b-word"];?><h3>
+    <h3>"c" is for: <?= $_SERVER["REQUEST_METHOD"]==="POST" && $_POST["c-word"];?><h3>    
+<div>  
 <div>  
 
